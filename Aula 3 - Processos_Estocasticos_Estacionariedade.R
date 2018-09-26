@@ -1,0 +1,21 @@
+> rm(list = ls())
+> getwd()
+[1] "c:/EconometriaA"
+> getwd()
+[1] "c:/EconometriaA"
+> setwd("c:/EconometriaA")
+> library("readr")
+> View(br)
+> library(readxl)
+> br <- read_excel("C:/EconometriaA/br.xlsx")
+> View(br)
+> br <- br[,-1]
+> PIB <- ts(br$PIB, start = 1950, frequency = 1)
+> plot(PIB)
+> hist(PIB)
+> Trabalho <- ts(br$Trabalho, start = 1950, frequency = 1)
+> plot(Trabalho)
+> hist(Trabalho)
+> Cambio <- ts(br$Cambio, start = 1950, frequency = 1)
+> plot(Cambio)
+> hist(Cambio)
